@@ -1,0 +1,42 @@
+use nikunj_projects;
+CREATE EXTERNAL TABLE departments
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.avro.AvroSerDe'
+STORED AS INPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerInputFormat'
+OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerOutputFormat'
+location "/user/anabig114246/exl_bootcamp/departments"
+TBLPROPERTIES ('avro.schema.url'='/user/anabig114246/schema/departments.avsc');
+
+CREATE EXTERNAL TABLE dept_emp
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.avro.AvroSerDe'
+STORED AS INPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerInputFormat'
+OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerOutputFormat'
+location "/user/anabig114246/exl_bootcamp/dept_emp"
+TBLPROPERTIES ('avro.schema.url'='/user/anabig114246/schema/dept_emp.avsc');
+
+CREATE EXTERNAL TABLE dept_manager
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.avro.AvroSerDe'
+STORED AS INPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerInputFormat'
+OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerOutputFormat'
+location "/user/anabig114246/exl_bootcamp/dept_manager"
+TBLPROPERTIES ('avro.schema.url'='/user/anabig114246/schema/dept_manager.avsc');
+
+CREATE EXTERNAL TABLE employees
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.avro.AvroSerDe'
+STORED AS INPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerInputFormat'
+OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerOutputFormat'
+location "/user/anabig114246/exl_bootcamp/employees"
+TBLPROPERTIES ('avro.schema.url'='/user/anabig114246/schema/employees.avsc');
+
+CREATE EXTERNAL TABLE salaries
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.avro.AvroSerDe'
+STORED AS INPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerInputFormat'
+OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerOutputFormat'
+location "/user/anabig114246/exl_bootcamp/salaries"
+TBLPROPERTIES ('avro.schema.url'='/user/anabig114246/schema/salaries.avsc');
+
+CREATE EXTERNAL TABLE titles
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.avro.AvroSerDe'
+STORED AS INPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerInputFormat'
+OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerOutputFormat'
+location "/user/anabig114246/exl_bootcamp/titles"
+TBLPROPERTIES ('avro.schema.url'='/user/anabig114246/schema/titles.avsc');

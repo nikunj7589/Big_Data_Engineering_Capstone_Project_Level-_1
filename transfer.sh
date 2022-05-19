@@ -1,0 +1,1 @@
+sqoop import-all-tables --connect jdbc:mysql://ip-10-1-1-204.ap-south-1.compute.internal:3306/anabig114246 --username anabig114246 --password Bigdata123 --as-avrodatafile --warehouse-dir /user/anabig114246 --m 1 --driver com.mysql.jdbc.Driver
